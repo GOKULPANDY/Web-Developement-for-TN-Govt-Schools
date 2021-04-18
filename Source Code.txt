@@ -1,0 +1,241 @@
+SOURCE CODE:
+For Introduction Page:
+<?php
+if(isset($_POST['Fetch'])){
+	$dist = $_POST['district'];
+	if($dist == 'chennai'){
+		header('location: mini2.php');
+	}
+if(isset($_POST[‘Fetch’])){
+$dist=$_POST[‘district’];
+if($dist==’coimbatore’){
+header(‘location:mini2.php’);
+}
+if(isset($_POST[‘Fetch’])){
+$dist=$_POST[‘district’];
+if($dist==’salem’){
+header(‘location:mini3.php’);
+}
+if(isset($_POST[‘Fetch’])){
+$dist=$_POST[‘district’];
+if($dist==’madurai’){
+header(‘location:mini4.php’);
+}
+}
+?>
+
+<html>
+<head>
+<title>MINI PROJECT</title>
+<link href="front.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<div class="header">
+  <h1>GPS MAPPING OF GOVERNMENT SCHOOL</h1>
+  <h3>GOVERNMENT OF TAMILNADU</h3>
+</div>
+
+<div class="row">
+  
+  <div class="column middle" align="center" style="background-color:#bbb;">
+   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+														DISTRICT:<input type="text" name="district"><br>
+	                                                    DDO NAME:<input type="text" name="ddo"><br>
+                                                        SCHOOL TYPE<input type="text" name="school"<br>
+														<div  align="center">
+<input type="submit" value="Fetch" name='Fetch'/>
+								</form>
+</div>		
+</div>						
+  
+</div>
+
+
+
+</body>
+</html>
+
+CSS for Introduction Page:
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:url("amb.jpg");
+}
+
+/* Style the header */
+.header {
+  background-image:url("amb.jpg");
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color:white;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 100%;
+  background-image:url("amba.jpg");
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+  }
+}
+
+
+
+
+
+
+
+Code for Listing Cities:
+
+<html> <style> body { background-image:url("amb.jpg"); } </style> <body> { <div align="center"> <table cellspacing="0" cellpadding="3" rules="all" id="MainContent_StaffsGridView" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:600px;border-collapse:collapse;"> <tr style="color:White;background-color:#006699;font-weight:bold;"> <th class="hiddencol" scope="col">ID</th><th scope="col">School Name</th><th scope="col">School Details</th><th scope="col">View Staffs</th> </tr><tr style="color:#000066;"> <td class="hiddencol">1042</td><td>GHS Arcot</td><td align="center"> <input type="submit" name="ctl00$MainContent$StaffsGridView$ctl02$DetailsLink" value="Detailed Info" id="MainContent_StaffsGridView_DetailsLink_0" style="width:100px;" /> <br /> <a href='1.html'><input type="submit" name="ctl00$MainContent$StaffsGridView$ctl02$OnMapView" value="View on Map1" id="MainContent_StaffsGridView_OnMapView_0" style="width:100px;" /></a> </td><td><a href='table.html' style="color:#000066;">Select</a></td> </tr><tr style="color:#000066;"> <td class="hiddencol">1043</td><td>GHS Arumbakkam</td><td align="center"> <input type="submit" name="ctl00$MainContent$StaffsGridView$ctl03$DetailsLink" value="Detailed Info" id="MainContent_StaffsGridView_DetailsLink_1" style="width:100px;" /> <br /> <a href='6.html'><input type="submit" name="ctl00$MainContent$StaffsGridView$ctl03$OnMapView" value="View on Map" id="MainContent_StaffsGridView_OnMapView_1" style="width:100px;" /> </td><td><a href="javascript:__doPostBack(&#39;ctl00$MainContent$StaffsGridView&#39;,&#39;Select$1&#39;)" style="color:#000066;">Select</a></td> </tr><tr style="color:#000066;"> <td class="hiddencol">1044</td><td>GHS Vyaserpadi </td><td align="center"> <input type="submit" name="ctl00$MainContent$StaffsGridView$ctl04$DetailsLink" value="Detailed Info" id="MainContent_StaffsGridView_DetailsLink_2" style="width:100px;" /> <br /> <a href='3.html'><input type="submit" name="ctl00$MainContent$StaffsGridView$ctl04$OnMapView" value="View on Map" id="MainContent_StaffsGridView_OnMapView_2" style="width:100px;" /> </td><td><a href="javascript:__doPostBack(&#39;ctl00$MainContent$StaffsGridView&#39;,&#39;Select$2&#39;)" style="color:#000066;">Select</a></td> </tr><tr style="color:#000066;"> <td class="hiddencol">1045</td><td>GHS Saidhapet</td><td align="center"> <input type="submit" name="ctl00$MainContent$StaffsGridView$ctl05$DetailsLink" value="Detailed Info" id="MainContent_StaffsGridView_DetailsLink_3" style="width:100px;" /> <br /> <a href='4.html'><input type="submit" name="ctl00$MainContent$StaffsGridView$ctl05$OnMapView" value="View on Map" id="MainContent_StaffsGridView_OnMapView_3" style="width:100px;" /> </td><td><a href="javascript:__doPostBack(&#39;ctl00$MainContent$StaffsGridView&#39;,&#39;Select$3&#39;)" style="color:#000066;">Select</a></td> </tr><tr style="color:#000066;"> <td class="hiddencol">1307</td><td>GHS Whitesroad</td><td align="center"> <input type="submit" name="ctl00$MainContent$StaffsGridView$ctl06$DetailsLink" value="Detailed Info" id="MainContent_StaffsGridView_DetailsLink_4" style="width:100px;" /> <br /> <a href='5.html'><input type="submit" name="ctl00$MainContent$StaffsGridView$ctl06$OnMapView" value="View on Map" id="MainContent_StaffsGridView_OnMapView_4" style="width:100px;" /> </td><td><a href="javascript:__doPostBack(&#39;ctl00$MainContent$StaffsGridView&#39;,&#39;Select$4&#39;)" style="color:#000066;">Select</a></td> </tr><tr style="color:#000066;"> </tr> </table> </div> </div> <br /> <div class="row" align="center"> </div> </div> </div> <br /> </div> <div class="clear"> </div> </div> <div class="footer"> </div> </div> <script type='text/javascript'>new Sys.WebForms.Menu({ element: 'NavigationMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form> </body> </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Code For Details Of The Staff:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+background-image:url("amb.jpg");
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <th>COMPLETE DETAILS OF THE SCHOOL</th>
+    <th></th>
+    <th></th>
+	<th></th>
+  </tr>
+  <tr>
+    <td>DISTRICT:</td>
+    <td>Chennai</td>
+    <td>WATER SUPPLY:</td>
+	<td>Yes</td>
+  </tr>
+  <tr>
+    <td>LATITUDE:</td>
+    <td>26.035981</td>
+    <td>LIBRARY:</td>
+	<td>Yes</td>
+  </tr>
+  <tr>
+    <td>LONGITUDE:</td>
+    <td>93.901878</td>
+    <td>PLAYGROUND:</td>
+	<td>Yes</td>
+  </tr>
+  <tr>
+    <td>CLASS TAUGHT FROM:</td>
+    <td>1 </td>
+    <td>TOILET STATUS:</td>
+	<td>External</td>
+  </tr>
+  <tr>
+    <td>CLASS TAUGHT TO:</td>
+    <td>12</td>
+    <td>HOSTEL:</td>
+	<td>No</td>
+  </tr>
+  <tr>
+    <td>NO OF CLASSROOMS:</td>
+    <td>12</td>
+    <td>STAFF QUARTERS:</td>
+	<td>No</td>
+  </tr>
+  <tr>
+    <td>NO OF TEACHING STAFF:</td>
+    <td>10</td>
+    <td>TYPE OF LAND HOLDING:</td>
+	<td>Donated</td>
+  </tr>
+  <tr>
+    <td>NO OF NON TEACHING STAFF:</td>
+    <td>15</td>
+    <td>LOCATION:</td>
+	<td>Arcot</td>
+  </tr>
+  <tr>
+    <td>TOTAL STUDENTS:</td>
+    <td>1000</td>
+    <td>ROAD ACCESSIBILITY:</td>
+	<td>Arcot main road</td>
+  </tr>
+  <tr>
+    <td>POWER CONNECTION:</td>
+    <td>Yes</td>
+    <td>BANK ACCOUNT DETAILS:</td>
+	<td>10810524633</td>
+  </tr>
+</table>
+
+</body>
+</html>
